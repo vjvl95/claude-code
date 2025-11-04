@@ -1,0 +1,115 @@
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.control-button {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  min-width: 150px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.control-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.control-button:active {
+  transform: translateY(0);
+}
+
+.animation-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.type-button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.type-button:hover {
+  background: #f0f4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.type-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.type-button:focus,
+.control-button:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls-container {
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .control-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    min-width: 130px;
+  }
+
+  .type-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .animation-types {
+    gap: 0.8rem;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls-container {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .control-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    min-width: 120px;
+  }
+
+  .type-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .animation-types {
+    gap: 0.6rem;
+    max-width: 350px;
+  }
+}
